@@ -11,7 +11,7 @@ Applications Installer is a Python script that automates the installation of pop
   - Firefox
   - Google Chrome
   - VLC Media Player
-  - VMware Workstation Pro
+
 - Allows users to select specific applications to install or perform a full installation of all applications
 - Silently installs applications in the English language, regardless of the system's language settings
 - Automatically adds installed applications to the system PATH when necessary

@@ -15,8 +15,7 @@ applications = [
     "Wireshark",
     "Firefox",
     "Google Chrome",
-    "VLC Media Player",
-    "VMware Workstation Pro"
+    "VLC Media Player"
 ]
 
 # Display the list of applications
@@ -175,22 +174,5 @@ for app_num in selected_apps:
         os.remove(vlc_installer_path)
 
         print("VLC Media Player installation completed successfully.")
-
-    elif app_num == 7:  # VMware Workstation Pro
-        # Download the latest stable VMware Workstation Pro installer for Windows
-        vmware_installer_url = "https://download3.vmware.com/software/WKST-1751-WIN/VMware-workstation-full-17.5.1-23298084.exe"
-        vmware_installer_path = "vmware_installer.exe"
-        response = requests.get(vmware_installer_url)
-        with open(vmware_installer_path, "wb") as file:
-            file.write(response.content)
-
-        # Install VMware Workstation Pro silently with enhanced keyboard driver and disable anonymous data collection
-        vmware_install_command = f"{vmware_installer_path} /s /v\"/qn EULAS_AGREED=1 INSTALLENHANCEDKEYBOARD=1 DATACOLLECTION=0\""
-        subprocess.run(vmware_install_command, shell=True)
-
-        # Clean up the VMware Workstation Pro installer file
-        os.remove(vmware_installer_path)
-
-        print("VMware Workstation Pro installation completed successfully.")
 
 print("All selected applications have been installed successfully.")
